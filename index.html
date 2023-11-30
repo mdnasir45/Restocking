@@ -33,7 +33,7 @@
         label {
             display: block;
             margin: 10px 0 5px;
-            color: #555555;
+           color: #175c9e;
         }
 
         input[type="text"],
@@ -41,9 +41,10 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
-            border: 1px solid #dddddd;
+            border: 1px solid #690f0f;
             border-radius: 4px;
             box-sizing: border-box;
+
         }
 
         input[type="submit"] {
@@ -86,25 +87,25 @@
 </head>
 <body>
 
-    <form action="submit_form.php" method="post" onsubmit="return validateForm()">
+    <form action="https://script.google.com/macros/s/AKfycbyrUxaGtvNc6OdfT9nSlKIxC-RvXg6XOjrhL_jiDFuHiPAV2n6mO-0Ophb1gkDJoBk/exec" method="post" onsubmit="return validateForm()">
         <h2>Product Restocking Form</h2>
 
         <!-- Password field with validation -->
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" placeholder="Enter your ID" required>
         <label class="error" id="password-error"></label>
 
         <!-- Order field -->
         <label for="order">Ordering Field:</label>
-        <input type="text" id="order" name="order">
+        <input type="text" id="order" name="order" placeholder="Write here Items to order ">
 
         <!-- Receive -->
         <label for="order">Receiving Field:</label>
-        <input type="text" id="order" name="order">
+        <input type="text" id="order" name="order" placeholder="Write here Items you received">
 
         <!-- Release field -->
         <label for="release">Releasing Field:</label>
-        <input type="text" id="release" name="release">
+        <input type="text" id="release" name="release" placeholder="Write here items you released">
 
         <input type="submit" value="Submit">
 
