@@ -97,15 +97,15 @@
 
         <!-- Order field -->
         <label for="order">Ordering Field:</label>
-        <input type="text" id="order" name="order" placeholder="Write here Items to order ">
+        <input type="text" id="order" name="order" placeholder="Write here Items to order " maxlength="50" oninput="updateCharacterCount(this)">
 
         <!-- Receive -->
         <label for="receive">Receiving Field:</label>
-        <input type="text" id="receive" name="receive" placeholder="Write here Items you received">
+        <input type="text" id="receive" name="receive" placeholder="Write here Items you received" maxlength="50" oninput="updateCharacterCount(this)">
 
         <!-- Release field -->
         <label for="release">Releasing Field:</label>
-        <input type="text" id="release" name="release" placeholder="Write here items you released">
+        <input type="text" id="release" name="release" placeholder="Write here items you released" maxlength="50" oninput="updateCharacterCount(this)">
 
         <input type="submit" value="Submit">
 
@@ -115,6 +115,11 @@
     </form>
 
     <script>
+        function updateCharacterCount(element) {
+    var characterCountElement = document.getElementById("characterCount");
+    var currentCount = element.value.length;
+    characterCountElement.innerText = currentCount;
+  }
         function validateForm() {
             // Allowed passwords
             var allowedPasswords = ["343", "111111111111111111111", "1221212221212", "12121222222222222"];
